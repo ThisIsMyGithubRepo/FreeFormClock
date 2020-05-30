@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Alan/GitHub/FreeFormClock/include",
+                "c:/Alan/GitHub/FreeFormClock/src",
+                "C:/Users/anonis/.platformio/lib/TM1637_ID258",
+                "C:/Users/anonis/.platformio/lib/RTClib_ID83",
+                "c:/Alan/GitHub/FreeFormClock/lib/Eeprom24C32_64/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                "C:/Users/anonis/.platformio/lib/Arduino-L6470_ID2404/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/anonis/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Alan/GitHub/FreeFormClock/include",
+                    "c:/Alan/GitHub/FreeFormClock/src",
+                    "C:/Users/anonis/.platformio/lib/TM1637_ID258",
+                    "C:/Users/anonis/.platformio/lib/RTClib_ID83",
+                    "c:/Alan/GitHub/FreeFormClock/lib/Eeprom24C32_64/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                    "C:/Users/anonis/.platformio/lib/Arduino-L6470_ID2404/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/anonis/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/anonis/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40303",
+                "ARDUINO_AVR_PRO",
+                "F_CPU=8000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/Users/anonis/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
