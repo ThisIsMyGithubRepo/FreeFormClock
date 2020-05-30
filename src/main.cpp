@@ -1,8 +1,5 @@
-// Date and time functions using a DS3231 RTC connected via I2C and Wire lib
-// rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
 #include "RTClib.h"
 RTC_DS3231 rtc;
-// char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
 #include "TM1637Display.h"
 // Define the connections pins:
@@ -12,13 +9,6 @@ RTC_DS3231 rtc;
 TM1637Display display = TM1637Display(CLK, DIO);
 const uint8_t data[] = {0xff, 0xff, 0xff, 0xff}; // All Segments On
 const uint8_t blank[] = {0x00, 0x00, 0x00, 0x00}; // All Segments Off
-// You can set the individual segments per digit to spell words or create other symbols:
-/* const uint8_t done[] = {
-  SEG_B | SEG_C | SEG_D | SEG_E | SEG_G,           // d
-  SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,   // O
-  SEG_C | SEG_E | SEG_G,                           // n
-  SEG_A | SEG_D | SEG_E | SEG_F | SEG_G            // E
-}; */
 const int display_BrightnessMax = 7;
 const int display_BrightnessMin = 1;
 
@@ -39,8 +29,6 @@ const word addr_Brightness = 0;
 
 // Global Config
 uint8_t cfg_Brightness = 7;
-
-
 
 struct button
 {
@@ -81,7 +69,7 @@ int get12h_FormatHours(int hours_24h_format)
   int hours_12h_format;
   if (hours_24h_format > 12) 
   {
-      hours_12h_format = hours_24h_format - 12; // Subtract 12 if the hours are above 12.
+      hours_12h_format = hours_24h_format - 12;
   } 
   else
   {
@@ -102,7 +90,7 @@ void ShowTime(DateTime datevalue)
   int h1;
   int m10;
   int m1;
-  int seconds; // If we are in an even second
+  int seconds;
 
   hours_12h_format = get12h_FormatHours(datevalue.hour());
 
@@ -237,7 +225,7 @@ void Add1Min()
   if(m1 > 9) {m1 = 0;}
   mins = m10 * 10 + m1;
 
-  rtc.adjust(DateTime(datevalue.year(),datevalue.month(), datevalue.day(), datevalue.hour(), mins, 0)); // Adusting the minutes also sets seconds to 0.
+  rtc.adjust(DateTime(datevalue.year(),datevalue.month(), datevalue.day(), datevalue.hour(), mins, 0)); // Adusting the minutes and also set seconds to 0.
 }
 
 void Sub1Min()
@@ -251,7 +239,7 @@ void Sub1Min()
   if(m1 < 0) {m1 = 9;}
   mins = m10 * 10 + m1;
 
-  rtc.adjust(DateTime(datevalue.year(),datevalue.month(), datevalue.day(), datevalue.hour(), mins, 0)); // Adusting the minutes also sets seconds to 0.
+  rtc.adjust(DateTime(datevalue.year(),datevalue.month(), datevalue.day(), datevalue.hour(), mins, 0)); // Adusting the minutes and also set seconds to 0.
 }
 
 void loop () 
